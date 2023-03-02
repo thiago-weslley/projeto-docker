@@ -1,4 +1,5 @@
-#!/bin/bash
+docker cp index.html webserver:/usr/local
+/apache2/htdocs#!/bin/bash
 
 echo '=== adicionado a imagem http ao repositório local ==='
 docker pull httpd
@@ -23,5 +24,9 @@ wget https://github.com/digitalinnovationone/cv/archive/refs/heads/main.zip
 
 echo '=== extraindo o arquivo zip ==='
 unzip main.zip
+
+echo '=== copiado o arquivo html para o diretório htdocs ==='
+cd cv-main/
+docker cp index.html webserver:/usr/local/apache2/htdocs
 
 echo '=== finalizando esta estapa ==='
