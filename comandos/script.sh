@@ -1,5 +1,4 @@
-docker cp index.html webserver:/usr/local
-/apache2/htdocs#!/bin/bash
+#!/bin/bash
 
 echo '=== adicionando a imagem http ao repositório local ==='
 docker pull httpd
